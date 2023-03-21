@@ -9,7 +9,7 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
-                sh 'python main.py'
+                sh 'python3 main.py'
             }
         }
         stage('Checkout SCM') {
@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Hola') {
             steps {
-                echo '> Hola 03 ...'
+                echo '> Hola 04 ...'
             }
         }
     }
