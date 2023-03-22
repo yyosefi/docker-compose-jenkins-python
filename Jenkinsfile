@@ -6,22 +6,18 @@ pipeline {
     }
  
     stages {
-        stage('Hello') {
+        stage('python06') {
             steps {
-                echo 'Hello World'
+                echo 'test 06'
                 sh '/usr/bin/python3 main.py'
             }
         }
-        stage('Checkout SCM') {
-            steps {
-                echo '> Checking out the source control ...'
-                checkout scm
-            }
-        }
-        stage('Hola') {
-            steps {
-                echo '> Hola 05 ...'
-            }
-        }
+//         stage('Checkout SCM') {
+//             steps {
+//                 echo '> Checking out the source control ...'
+//                 checkout scm
+//             }
+//         }
+
     }
 }
