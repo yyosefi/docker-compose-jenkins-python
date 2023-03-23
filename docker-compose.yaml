@@ -1,0 +1,18 @@
+version: '3.8'
+networks:
+  jenkins:
+    driver: bridge
+services:
+  jenkins_server:
+    build:
+      context: . # Build container from the custom Dockerfile defined in the repo.
+    networks:
+      - jenkins # Use jenkins network defined earlier
+    container_name: JenkinsServer
+    restart: always
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - /var/jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
