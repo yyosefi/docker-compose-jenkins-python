@@ -12,9 +12,8 @@ pipeline {
                 checkout scm
             }
         }
-        stage('python06') {
+        stage('Run Python script') {
             steps {
-                echo 'test 06'
                 sh '/usr/bin/python3 main.py'
             }
         }
